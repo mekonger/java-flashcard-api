@@ -4,7 +4,6 @@ import com.m3kong.flashcard.dto.request.account.AccountChangePasswordRequest;
 import com.m3kong.flashcard.dto.request.account.AccountCreateRequest;
 import com.m3kong.flashcard.dto.request.account.AccountResetPassword;
 import com.m3kong.flashcard.dto.response.token.TokenResponse;
-import com.m3kong.flashcard.entity.AccountEntity;
 import com.m3kong.flashcard.repository.AccountRepository;
 import com.m3kong.flashcard.service.AccountService;
 import lombok.AllArgsConstructor;
