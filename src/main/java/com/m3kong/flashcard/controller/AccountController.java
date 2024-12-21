@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/api/account")
 @AllArgsConstructor
 public class AccountController {
-
-    final private AccountService accountService;
-    final private TokenService tokenService;
+    private AccountService accountService;
+    private TokenService tokenService;
 }

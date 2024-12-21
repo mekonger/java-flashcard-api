@@ -1,7 +1,8 @@
 version: '3.0'
 
 services:
-  database_svc:
+  flashcard-db:
+    container_name: flashcard-db
     image: postgres
     restart: always
     # set shared memory limit when using docker-compose

@@ -2,6 +2,7 @@ package com.m3kong.flashcard.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -18,15 +19,27 @@ public class AccountEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(columnDefinition = "varchar(255) comment 'user name'", nullable = false)
+    @Comment("user name")
+    @Column(columnDefinition = "varchar(255)", nullable = false)
     private String userName;
 
-    @Column(columnDefinition = "varchar(255) comment 'account email'", nullable = false, unique = true)
+    @Comment("account email")
+    @Column(columnDefinition = "varchar(255)", nullable = false, unique = true)
     private String email;
 
-    @Column(columnDefinition = "varchar(255) comment 'hash password'", nullable = false)
+    @Comment("hash password")
+    @Column(columnDefinition = "varchar(255)", nullable = false)
     private String hashPassword;
 
-    @Column(columnDefinition = "varchar(255) comment 'public key of hash password'", nullable = false)
+    @Comment("public key of hash password")
+    @Column(columnDefinition = "varchar(255)", nullable = false)
     private String saltKey;
+
+    @Comment("created time")
+    @Column(columnDefinition = "bigint", nullable = false)
+    private long createdTime;
+
+    @Comment("updated time")
+    @Column(columnDefinition = "bigint", nullable = false)
+    private long updatedTime;
 }

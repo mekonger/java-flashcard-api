@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/flashcardDEV
+    username: postgres_admin
+    password: postgres#1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        use_sql_comments: true

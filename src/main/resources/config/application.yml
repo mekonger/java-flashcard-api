@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: flash-card
+  profiles:
+    active: dev
